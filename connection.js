@@ -7,4 +7,9 @@ const db = mysql.createConnection({
   database: 'qa_sawahlunto',
 });
 
+db.connect((err) => {
+  if (err) throw err;
+  console.log('Database Connected!');
+});
+
 module.exports = db;
